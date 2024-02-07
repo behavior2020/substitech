@@ -32,7 +32,7 @@ def post_data():
 @app.route('/connected', methods=['GET'])
 def connect_datascience():
     """returns connection made"""
-    return "connected to DataScience"
+    return "Connected to DataScience"
 
 
 if __name__ == '__main__':
