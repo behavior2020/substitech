@@ -6,6 +6,7 @@ app = Flask(__name__)
 
 @app.route('/teachers', methods=['POST'])
 def post_data():
+    print("working!")
     data = request.json  # Assuming the client sends a JSON body
     # Process the data...
     # prediction = loaded_model.predict([[is_male, num_inters, late_on_payment, age, years_in_contract]])
