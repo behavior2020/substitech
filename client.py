@@ -1,8 +1,18 @@
 import requests
 
-url = 'http://13.53.130.43:8080/teachers'
+# URL for the POST request
+url1 = 'http://13.53.130.43:8080/teachers'
+# Data and headers for the POST request
+data = {}  # Assuming your endpoint expects JSON data
 headers = {'Content-Type': 'application/json'}
-data = {}  # Your Flask app doesn't use this, but it's here to simulate a typical JSON POST request
 
-response = requests.post(url, json=data, headers=headers)
-print(response.json())
+# Making the POST request to /teachers
+response1 = requests.post(url1, json=data, headers=headers)
+print(response1.json())
+
+# URL for the GET request
+url2 = 'http://13.53.130.43:8080/datascience'
+
+# Making the GET request to /datascience
+response2 = requests.get(url2)
+print(response2.text)
