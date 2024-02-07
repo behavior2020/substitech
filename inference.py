@@ -4,7 +4,7 @@ import random
 app = Flask(__name__)
 
 
-@app.route('/releventsubstitutes', methods=['POST'])
+@app.route('/releventsubstitutes', methods=['GET', 'POST'])
 def post_data():
     """accepts parameters and returns list of 10 names with similarity score"""
     data = request.json  # Assuming the client sends a JSON body
