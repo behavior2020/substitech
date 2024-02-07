@@ -6,12 +6,11 @@ app = Flask(__name__)
 
 @app.route('/teachers', methods=['POST'])
 def post_data():
-    print("working!")
+    """accepts parameters and returns list of 10 names with similarity score"""
     data = request.json  # Assuming the client sends a JSON body
-    # Process the data...
-    # prediction = loaded_model.predict([[is_male, num_inters, late_on_payment, age, years_in_contract]])
 
-    # Generating a list of 10 full names (first and last names)
+    # Process the data...
+
     full_names = [
         "Olivia Johnson",
         "Liam Smith",
@@ -26,6 +25,14 @@ def post_data():
     ]
     names_with_scores = [{"name": name, "score": random.uniform(0, 100)} for name in full_names]
     return jsonify({"status": "success", "names": names_with_scores}), 200
+
+
+# New route
+
+@app.route('/datascience', methods=['GET'])
+def connect_datascience():
+    """returns connection made"""
+    return "connected to DataScience"
 
 
 if __name__ == '__main__':
